@@ -1,3 +1,4 @@
+from time import sleep
 
 def my_func(context, p1=1, p2='a-string'):
     # access input metadata, values, files, and secrets (passwords)
@@ -11,4 +12,5 @@ def my_func(context, p1=1, p2='a-string'):
     context.log_result('accuracy', p1 * 2)
     context.log_result('loss', p1 * 3)
     context.set_label('framework', 'sklearn')
-
+    while True:
+        sleep(100)
